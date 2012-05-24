@@ -49,6 +49,8 @@ class Library_AppTest extends PHPUnit_Framework_TestCase
 
     public function testConfig()
     {
+        $this->markTestIncomplete('Need to mock out filesystem');
+
         Acuity_Registry::clearInstance();
 
         $app = new Acuity_App();
@@ -81,7 +83,7 @@ class Library_AppTest extends PHPUnit_Framework_TestCase
 
     public function testRequest()
     {
-        $this->markTestSkipped('This test needs to be refactored. The dispatch method got much more complicated');
+        $this->markTestIncomplete('This test needs to be refactored. The dispatch method got much more complicated');
         $_SERVER['REQUEST_URI'] = '/testcontroller/testaction';
 
         Acuity_Request::clearInstance();
