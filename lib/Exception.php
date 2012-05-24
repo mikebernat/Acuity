@@ -17,9 +17,9 @@
  * @since    .01
  *
  */
- 
- 
- /**
+
+
+/**
  * Acuity Exception
  *
  * @category  Testing
@@ -33,5 +33,5 @@
  */
 class Acuity_Exception extends Exception
 {
-	
+
 }

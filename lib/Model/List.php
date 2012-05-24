@@ -16,9 +16,9 @@
  * @created  Jan 28, 2010
  *
  */
- 
- 
- /**
+
+
+/**
  * Abstract object for list data
  *
  * @category  Testing
@@ -32,10 +32,10 @@
  */
 abstract class Acuity_Model_List extends ArrayIterator
 {
-	/**
-	 * Fetch a list of items
-	 * 
-	 * @return array
-	 */
-	abstract protected function getList();
+    /**
+     * Fetch a list of items
+     *
+     * @return array
+     */
+    abstract protected function getList();
 }

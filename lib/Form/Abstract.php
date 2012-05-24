@@ -16,9 +16,9 @@
  * @created  Jan 28, 2010
  *
  */
- 
- 
- /**
+
+
+/**
  * Abstract form class
  *
  * @category  Testing
@@ -32,15 +32,15 @@
  */
 abstract class Acuity_Form_Abstract
 {
-	public $output;
-	
-	/**
-	 * To string method
-	 * 
-	 * @return string
-	 */
-	public function __toString()
-	{
-		return $this->output;
-	}
+    public $output;
+
+    /**
+     * To string method
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->output;
+    }
 }

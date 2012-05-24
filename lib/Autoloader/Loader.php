@@ -18,9 +18,9 @@
  * @created  Jan 28, 2010
  *
  */
- 
- 
- /**
+
+
+/**
  * Abstract autoloader
  *
  * @category  Testing
@@ -34,12 +34,12 @@
  */
 abstract class Acuity_Autoloader_Loader
 {
-	/**
-	 * Given a className, attempts to find and include its file
-	 * 
-	 * @param string $className The class to include
-	 * 
-	 * @return boolean true on success or failure
-	 */
-	public abstract function load($className);
+    /**
+     * Given a className, attempts to find and include its file
+     *
+     * @param string $className The class to include
+     *
+     * @return boolean true on success or failure
+     */
+    public abstract function load($className);
 }

@@ -18,9 +18,9 @@
  * @created  Jan 28, 2010
  *
  */
- 
- 
- /**
+
+
+/**
  * Page not found exception
  *
  * @category  Testing
@@ -34,5 +34,5 @@
  */
 class Acuity_Exception_Pagenotfound extends Acuity_Exception
 {
-	
+
 }

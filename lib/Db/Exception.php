@@ -18,9 +18,9 @@
  * @created  Jan 28, 2010
  *
  */
- 
- 
- /**
+
+
+/**
  * Acuity Db Exception
  *
  * @category  Testing
@@ -34,5 +34,5 @@
  */
 class Acuity_Db_Exception extends Acuity_Exception
 {
-	
+
 }

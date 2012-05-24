@@ -18,9 +18,9 @@
  * @created  Jan 28, 2010
  *
  */
- 
- 
- /**
+
+
+/**
  * Autoloads models
  *
  * @category  Testing
@@ -34,28 +34,28 @@
  */
 class Acuity_Autoloader_Models extends Acuity_Autoloader_Loader
 {
-	/**
-	 * Load a class
-	 * 
-	 * @param string $className Name of the class
-	 * 
-	 * @return true of class was loaded, false otherwise
-	 */
-	public function load($className)
-	{
-		$fileName = str_replace('_', DS, $className) . '.php';
-		
-		$paths = array(
-			ROOT_PATH . DS . 'Models' . DS
-		);
-		
-		foreach ($paths as $path) {
-			if (file_exists($path . $fileName)) {
-				include_once $path . $fileName;
-				return true;
-			}
-		}
-		
-		return false;
-	}
+    /**
+     * Load a class
+     *
+     * @param string $className Name of the class
+     *
+     * @return true of class was loaded, false otherwise
+     */
+    public function load($className)
+    {
+        $fileName = str_replace('_', DS, $className) . '.php';
+
+        $paths = array(
+        ROOT_PATH . DS . 'Models' . DS
+        );
+
+        foreach ($paths as $path) {
+            if (file_exists($path . $fileName)) {
+                include_once $path . $fileName;
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

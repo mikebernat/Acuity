@@ -17,9 +17,9 @@
  * @since    .01
  *
  */
- 
- 
- /**
+
+
+/**
  * Autoloads Controllers
  *
  * @category  Testing
@@ -33,28 +33,28 @@
  */
 class Acuity_Autoloader_Controllers extends Acuity_Autoloader_Loader
 {
-	/**
-	 * Load a class
-	 * 
-	 * @param string $className Name of the class
-	 * 
-	 * @return true of class was loaded, false otherwise
-	 */
-	public function load($className)
-	{
-		$fileName = str_replace('_', DS, $className) . '.php';
-		
-		$paths = array(
-			ROOT_PATH . DS . 'Controllers' . DS
-		);
-		
-		foreach ($paths as $path) {
-			if (file_exists($path . $fileName)) {
-				include_once $path . $fileName;
-				return true;
-			}
-		}
-		
-		return false;
-	}
+    /**
+     * Load a class
+     *
+     * @param string $className Name of the class
+     *
+     * @return true of class was loaded, false otherwise
+     */
+    public function load($className)
+    {
+        $fileName = str_replace('_', DS, $className) . '.php';
+
+        $paths = array(
+        ROOT_PATH . DS . 'Controllers' . DS
+        );
+
+        foreach ($paths as $path) {
+            if (file_exists($path . $fileName)) {
+                include_once $path . $fileName;
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

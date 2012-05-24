@@ -21,9 +21,9 @@ define('DS', DIRECTORY_SEPARATOR);
 define('ROOT_PATH', dirname(dirname(__FILE__)));
 
 set_include_path(
-	ROOT_PATH . DS . 'lib' . PATH_SEPARATOR .
-	ROOT_PATH . DS . 'tests' . PATH_SEPARATOR .
-	get_include_path()
+ROOT_PATH . DS . 'lib' . PATH_SEPARATOR .
+ROOT_PATH . DS . 'tests' . PATH_SEPARATOR .
+get_include_path()
 );
 
 require_once ROOT_PATH . DS . 'lib' . DS . 'App.php';

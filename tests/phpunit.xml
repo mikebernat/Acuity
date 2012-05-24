@@ -1,8 +1,6 @@
-<phpunit bootstrap="./TestHelper.php" 
-		 verbose="true"
-		 colors="true"
-		 stoponerror="true">
-    <testsuite name="Acuity - Testsuite">
-        <directory>./</directory>
-    </testsuite>
+<phpunit bootstrap="./TestHelper.php" verbose="true" colors="true"
+	stoponerror="true">
+	<testsuite name="Acuity - Testsuite">
+		<directory>./</directory>
+	</testsuite>
 </phpunit>

@@ -18,9 +18,9 @@
  * @created  Jan 28, 2010
  *
  */
- 
- 
- /**
+
+
+/**
  * Primary database driver
  *
  * @category  Testing
@@ -34,5 +34,5 @@
  */
 class Acuity_Db_Driver extends Acuity_Db_Abstract
 {
-	
+
 }

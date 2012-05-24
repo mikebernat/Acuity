@@ -16,9 +16,9 @@
  * @created  Jan 28, 2010
  *
  */
- 
- 
- /**
+
+
+/**
  * Abstract helper object
  *
  * @category  Testing
@@ -32,5 +32,5 @@
  */
 Abstract class Acuity_Helper_Abstract
 {
-	
+
 }

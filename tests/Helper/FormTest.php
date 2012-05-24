@@ -5,23 +5,23 @@ require_once 'PHPUnit/Framework.php';
 class Library_Helper_FormTest extends PHPUnit_Framework_TestCase
 {
 
-	public function setUp()
-	{
+    public function setUp()
+    {
 
-	}
+    }
 
-	public function tearDown()
-	{
+    public function tearDown()
+    {
 
-	}
+    }
 
-	public function testComplextConstruct()
-	{
-		$model = new Form_Helper_Mock();
+    public function testComplextConstruct()
+    {
+        $model = new Form_Helper_Mock();
 
-		$form = new Acuity_Helper_Form($model);
+        $form = new Acuity_Helper_Form($model);
 
-		$expected = <<<EXPECTED
+        $expected = <<<EXPECTED
 <div class="formstart begin " id="formstartForm_Helper_Mock">
 <form action="" method="POST" name="Form_Helper_Mock"><input type="hidden" name="id" id="inputid" value="" /><div class="formfield text  required" id="formurl">
 <label for="inputurl">url</label>
@@ -38,90 +38,90 @@ class Library_Helper_FormTest extends PHPUnit_Framework_TestCase
 </div>
 EXPECTED;
 
-		$this->assertEquals($expected, (string) $form);
-	}
+        $this->assertEquals($expected, (string) $form);
+    }
 
-   	public function testInstantiation()
-   	{
-   		$result = new Acuity_Helper_Form();
+    public function testInstantiation()
+    {
+        $result = new Acuity_Helper_Form();
 
-   		$this->assertInstanceOf('Acuity_Helper_Form', $result);
-   	}
+        $this->assertInstanceOf('Acuity_Helper_Form', $result);
+    }
 
-	public function testBegin()
-   	{
-   		$form = new Acuity_Helper_Form();
+    public function testBegin()
+    {
+        $form = new Acuity_Helper_Form();
 
-   		$result = $form->begin('test');
+        $result = $form->begin('test');
 
-   		$this->assertInstanceOf('Acuity_Form_Begin', $result);
-   	}
+        $this->assertInstanceOf('Acuity_Form_Begin', $result);
+    }
 
-	public function testHidden()
-   	{
-   		$form = new Acuity_Helper_Form();
+    public function testHidden()
+    {
+        $form = new Acuity_Helper_Form();
 
-   		$result = $form->hidden('test');
+        $result = $form->hidden('test');
 
-   		$this->assertInstanceOf('Acuity_Form_Hidden', $result);
-   	}
+        $this->assertInstanceOf('Acuity_Form_Hidden', $result);
+    }
 
-	public function testText()
-   	{
-   		$form = new Acuity_Helper_Form();
+    public function testText()
+    {
+        $form = new Acuity_Helper_Form();
 
-   		$result = $form->text('test');
+        $result = $form->text('test');
 
-   		$this->assertInstanceOf('Acuity_Form_Text', $result);
-   	}
+        $this->assertInstanceOf('Acuity_Form_Text', $result);
+    }
 
-	public function testSubmit()
-   	{
-   		$form = new Acuity_Helper_Form();
+    public function testSubmit()
+    {
+        $form = new Acuity_Helper_Form();
 
-   		$result = $form->submit('test');
+        $result = $form->submit('test');
 
-   		$this->assertInstanceOf('Acuity_Form_Submit', $result);
-   	}
+        $this->assertInstanceOf('Acuity_Form_Submit', $result);
+    }
 
-	public function testEnd()
-   	{
-   		$form = new Acuity_Helper_Form();
+    public function testEnd()
+    {
+        $form = new Acuity_Helper_Form();
 
-   		$result = $form->end('test');
+        $result = $form->end('test');
 
-   		$this->assertInstanceOf('Acuity_Form_End', $result);
-   	}
+        $this->assertInstanceOf('Acuity_Form_End', $result);
+    }
 
-	public function testMultiselect()
-   	{
-   		$form = new Acuity_Helper_Form();
+    public function testMultiselect()
+    {
+        $form = new Acuity_Helper_Form();
 
-   		$result = $form->multiselect('test', array());
+        $result = $form->multiselect('test', array());
 
-   		$this->assertInstanceOf('Acuity_Form_Multiselect', $result);
-   	}
+        $this->assertInstanceOf('Acuity_Form_Multiselect', $result);
+    }
 
-	public function testSelect()
-   	{
-   		$form = new Acuity_Helper_Form();
+    public function testSelect()
+    {
+        $form = new Acuity_Helper_Form();
 
-   		$result = $form->select('test', array());
+        $result = $form->select('test', array());
 
-   		$this->assertInstanceOf('Acuity_Form_Select', $result);
-   	}
+        $this->assertInstanceOf('Acuity_Form_Select', $result);
+    }
 }
 
 class Form_Helper_Mock extends Acuity_Model_Entity
 {
-	public $fields = array(
-		'id',
-		'url',
-		'name',
-	);
+    public $fields = array(
+        'id',
+        'url',
+        'name',
+    );
 
-	public function getSelect($primaryKey, $options = array())
-	{
+    public function getSelect($primaryKey, $options = array())
+    {
 
-	}
+    }
 }

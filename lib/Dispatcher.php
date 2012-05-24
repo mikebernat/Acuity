@@ -17,9 +17,9 @@
  * @since    .01
  *
  */
- 
- 
- /**
+
+
+/**
  * Takes care of dispatching requests
  *
  * @category  Testing
@@ -33,25 +33,25 @@
  */
 class Acuity_Dispatcher
 {
-	/**
-	 * Constructor
-	 * 
-	 * @return void
-	 */
-	public function __construct()
-	{
-		
-	}
-	
-	/**
-	 * Dispatch the request
-	 * 
-	 * @param Acuity_Request $request Current request
-	 * 
-	 * @return void
-	 */
-	public function dispatch(Acuity_Request $request)
-	{
-		
-	}
+    /**
+     * Constructor
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+
+    }
+
+    /**
+     * Dispatch the request
+     *
+     * @param Acuity_Request $request Current request
+     *
+     * @return void
+     */
+    public function dispatch(Acuity_Request $request)
+    {
+
+    }
 }

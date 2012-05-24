@@ -16,9 +16,9 @@
  * @created  Jan 28, 2010
  *
  */
- 
- 
- /**
+
+
+/**
  * Output the start of a form
  *
  * @category  Testing
@@ -32,41 +32,41 @@
  */
 class Acuity_Form_Begin extends Acuity_Form_Abstract
 {
-	
-	/**
-	 * Starts a form
-	 * 
-	 * @param string $name    Name of the form
-	 * @param array  $options Options
-	 * 
-	 * @return void
-	 */
-	public function __construct($name, $options = array())
-	{
-		$options_default = array(
-			'class'		=> '',
-			'id'		=> 'formstart' . $name,
-			'action'	=> '',
-			'method'	=> 'POST',
-		);
-		
-		$options = array_merge($options_default, $options);
-		
-		$output = array();
-		
-		$output[] = sprintf(
-			'<div class="formstart begin %s" id="%s">', 
-			$options['class'],
-			$options['id']
-		);
-							
-		$output[] = sprintf(
-			'<form action="%s" method="%s" name="%s">',
-			$options['action'],
-			$options['method'],
-			$name
-		);
 
-		$this->output = implode(PHP_EOL, $output);
-	}
+    /**
+     * Starts a form
+     *
+     * @param string $name    Name of the form
+     * @param array  $options Options
+     *
+     * @return void
+     */
+    public function __construct($name, $options = array())
+    {
+        $options_default = array(
+            'class'        => '',
+            'id'        => 'formstart' . $name,
+            'action'    => '',
+            'method'    => 'POST',
+        );
+
+        $options = array_merge($options_default, $options);
+
+        $output = array();
+
+        $output[] = sprintf(
+            '<div class="formstart begin %s" id="%s">', 
+        $options['class'],
+        $options['id']
+        );
+
+        $output[] = sprintf(
+            '<form action="%s" method="%s" name="%s">',
+        $options['action'],
+        $options['method'],
+        $name
+        );
+
+        $this->output = implode(PHP_EOL, $output);
+    }
 }

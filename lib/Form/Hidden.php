@@ -16,9 +16,9 @@
  * @created  Jan 28, 2010
  *
  */
- 
- 
- /**
+
+
+/**
  * Generate a hidden form element
  *
  * @category  Testing
@@ -32,33 +32,33 @@
  */
 class Acuity_Form_Hidden extends Acuity_Form_Abstract
 {
-	/**
-	 * Adds a hidden form element
-	 * 
-	 * @param string $name    Name of element
-	 * @param array  $options Options
-	 * 
-	 * @return void
-	 */
-	public function __construct($name, $options = array())
-	{
-		$options_default = array(
-			'value'		=> '',
-			'inputid'	=> 'input' . $name,
-		);
-		
-		$options = array_merge($options_default, $options);
-		
-		$output = array();
-		
-		$output[] = sprintf(
-			'<input type="hidden" name="%s" id="%s" value="%s" />',
-			$name,
-			$options['inputid'],
-			$options['value']
-		);
-		
-		
-		$this->output = implode(PHP_EOL, $output);
-	}
+    /**
+     * Adds a hidden form element
+     *
+     * @param string $name    Name of element
+     * @param array  $options Options
+     *
+     * @return void
+     */
+    public function __construct($name, $options = array())
+    {
+        $options_default = array(
+            'value'        => '',
+            'inputid'    => 'input' . $name,
+        );
+
+        $options = array_merge($options_default, $options);
+
+        $output = array();
+
+        $output[] = sprintf(
+            '<input type="hidden" name="%s" id="%s" value="%s" />',
+        $name,
+        $options['inputid'],
+        $options['value']
+        );
+
+
+        $this->output = implode(PHP_EOL, $output);
+    }
 }

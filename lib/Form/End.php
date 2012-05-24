@@ -16,9 +16,9 @@
  * @created  Jan 28, 2010
  *
  */
- 
- 
- /**
+
+
+/**
  * Close a form
  *
  * @category  Testing
@@ -32,28 +32,28 @@
  */
 class Acuity_Form_End extends Acuity_Form_Abstract
 {
-		
-	/**
-	 * Close a form
-	 * 
-	 * @param string $name    Not used
-	 * @param array  $options Options
-	 * 
-	 * @return void
-	 */
-	public function __construct($name = null, $options = array())
-	{
-		$options_default = array(
-		);
-		
-		$options = array_merge($options_default, $options);
-		
-		$output = array();
-		
-		$output[] = '</form>';
-		$output[] = '</div>';
-							
 
-		$this->output = implode(PHP_EOL, $output);
-	}
+    /**
+     * Close a form
+     *
+     * @param string $name    Not used
+     * @param array  $options Options
+     *
+     * @return void
+     */
+    public function __construct($name = null, $options = array())
+    {
+        $options_default = array(
+        );
+
+        $options = array_merge($options_default, $options);
+
+        $output = array();
+
+        $output[] = '</form>';
+        $output[] = '</div>';
+
+
+        $this->output = implode(PHP_EOL, $output);
+    }
 }

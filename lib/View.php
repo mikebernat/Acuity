@@ -17,9 +17,9 @@
  * @since    .01
  *
  */
- 
- 
- /**
+
+
+/**
  * View Object
  *
  * @category  Testing
@@ -33,60 +33,60 @@
  */
 class Acuity_View
 {
-	private $_viewVars = array();
-	
-	/**
-	 * Constructor
-	 * 
-	 * @return void
-	 */
-	public function __construct()
-	{
-		$this->_setScriptPaths();
-	}
-	
-	/**
-	 * Set script paths
-	 * 
-	 * @return void
-	 */
-	private function _setScriptPaths()
-	{
-		set_include_path(ROOT_PATH . PATH_SEPARATOR . get_include_path());
-		set_include_path(
-			ROOT_PATH . DS . 'views' . PATH_SEPARATOR . get_include_path()
-		);
-	}
-	
-	/**
-	 * Setter
-	 * 
-	 * @param string $name  Name
-	 * @param mixed  $value Value
-	 * 
-	 * @return void
-	 */
-	public function __set($name, $value)
-	{
-		$this->_viewVars[$name] = $value;
-	}
-	
-	/**
-	 * Render a script
-	 * 
-	 * @param string $name Name of template
-	 * 
-	 * @return string output of template
-	 */
-	public function render($name)
-	{
+    private $_viewVars = array();
 
-		extract($this->_viewVars);
-		
-		ob_start();
-		include_once $name;
-		$result = ob_get_clean();
-		
-		return $result;
-	}
+    /**
+     * Constructor
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->_setScriptPaths();
+    }
+
+    /**
+     * Set script paths
+     *
+     * @return void
+     */
+    private function _setScriptPaths()
+    {
+        set_include_path(ROOT_PATH . PATH_SEPARATOR . get_include_path());
+        set_include_path(
+        ROOT_PATH . DS . 'views' . PATH_SEPARATOR . get_include_path()
+        );
+    }
+
+    /**
+     * Setter
+     *
+     * @param string $name  Name
+     * @param mixed  $value Value
+     *
+     * @return void
+     */
+    public function __set($name, $value)
+    {
+        $this->_viewVars[$name] = $value;
+    }
+
+    /**
+     * Render a script
+     *
+     * @param string $name Name of template
+     *
+     * @return string output of template
+     */
+    public function render($name)
+    {
+
+        extract($this->_viewVars);
+
+        ob_start();
+        include_once $name;
+        $result = ob_get_clean();
+
+        return $result;
+    }
 }
