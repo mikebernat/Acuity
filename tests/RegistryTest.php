@@ -36,7 +36,7 @@ class Library_RegistryTest extends PHPUnit_Framework_TestCase
    	{
    		$registry = Acuity_Registry::getInstance();
    		
-   		$this->assertType('Acuity_Registry', $registry);
+   		$this->assertInstanceOf('Acuity_Registry', $registry);
    	}
    	
    	public function testStoringValue()

@@ -45,7 +45,7 @@ CONFIG;
     {
     	$config = new Acuity_Config($this->_testConfigPath);
     	
-    	$this->assertType('Acuity_Config', $config, 'instance returned was not of type Acuity_Config');
+    	$this->assertInstanceOf('Acuity_Config', $config, 'instance returned was not of type Acuity_Config');
     }
     
     /**

@@ -35,7 +35,7 @@ class Library_AppTest extends PHPUnit_Framework_TestCase
    	{
    		$app = new Acuity_App();
    		
-   		$this->assertType('Acuity_App', $app);
+   		$this->assertInstanceOf('Acuity_App', $app);
    	}
    	
    	public function testAutoLoader()
@@ -55,7 +55,7 @@ class Library_AppTest extends PHPUnit_Framework_TestCase
    		
    		$app->config();
    		
-   		$this->assertType('Acuity_Config', Acuity_Registry::get('config'));
+   		$this->assertInstanceOf('Acuity_Config', Acuity_Registry::get('config'));
    	}
    	
    	public function testDebug()

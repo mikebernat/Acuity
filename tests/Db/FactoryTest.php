@@ -25,8 +25,8 @@ class Library_Db_FactoryTest extends PHPUnit_Framework_TestCase
    		
    		$result = Acuity_Db_Factory::load($config);
    		
-   		$this->assertType('Acuity_Db_Abstract', $result);
-   		$this->assertType('Acuity_Db_Driver', $result);
+   		$this->assertInstanceOf('Acuity_Db_Abstract', $result);
+   		$this->assertInstanceOf('Acuity_Db_Driver', $result);
    	}
    	
    	/**

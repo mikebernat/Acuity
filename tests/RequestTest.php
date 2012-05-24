@@ -118,6 +118,6 @@ class Library_Db_RequestTest extends PHPUnit_Framework_TestCase
 
    		$result = Acuity_Request::getInstance();
    		
-   		$this->assertType('Acuity_Request', $result);
+   		$this->assertInstanceOf('Acuity_Request', $result);
    	}
 }

@@ -28,7 +28,7 @@ class Library_Db_SelectTest extends PHPUnit_Framework_TestCase
    	{
    		$result = $this->select;
    		
-   		$this->assertType('Acuity_Db_Select', $result);
+   		$this->assertInstanceOf('Acuity_Db_Select', $result);
    	}
    	
 	public function testSimpleAssembly()
@@ -37,7 +37,7 @@ class Library_Db_SelectTest extends PHPUnit_Framework_TestCase
 								->joinLeft('links_sites', 'sites.id = links_sites.site_id', array('id', 'u' => 'url'))
 								->where('sites.id = ?', 1);
 
-		$this->assertType('Acuity_Db_Select', $result);
+		$this->assertInstanceOf('Acuity_Db_Select', $result);
 		
 		$expected = 'SELECT sites.*,links_sites.id,links_sites.url as u FROM sites LEFT JOIN links_sites ON sites.id = links_sites.site_id WHERE sites.id = ?';
 		$this->assertEquals($expected, $this->select->assemble());
@@ -51,7 +51,7 @@ class Library_Db_SelectTest extends PHPUnit_Framework_TestCase
 								->limit(1)
 								->order('sites.name asc');
 
-		$this->assertType('Acuity_Db_Select', $result);
+		$this->assertInstanceOf('Acuity_Db_Select', $result);
 		
 		$expected = 'SELECT sites.*,links_sites.id,links_sites.url as u FROM sites INNER JOIN links_sites ON sites.id = links_sites.site_id WHERE sites.id = ? ORDER BY sites.name asc LIMIT 1';
 		$this->assertEquals($expected, $this->select->assemble());
@@ -70,7 +70,7 @@ class Library_Db_SelectTest extends PHPUnit_Framework_TestCase
    								->order('value')
    								->limit('15');
 
-   		$this->assertType('Acuity_Db_Select', $result);
+   		$this->assertInstanceOf('Acuity_Db_Select', $result);
    		
    		$expected = 'SELECT tableAlias.*,join1.field1,join1.field2,joinAlias.field1 as fieldAlias1,joinAlias.field2 FROM table as tableAlias INNER JOIN join1 ON tableAlias.id = join1.table_id INNER JOIN join2 as joinAlias ON joinAlias.id = join1.joinAlias_id WHERE id = ? AND name = ? AND type = ? ORDER BY name,value GROUP BY id LIMIT 15';
    		$this->assertEquals($expected, $this->select->assemble());
@@ -80,7 +80,7 @@ class Library_Db_SelectTest extends PHPUnit_Framework_TestCase
    	{
    		$result = $this->select->from('table', array());
    		
-   		$this->assertType('Acuity_Db_Select', $result);
+   		$this->assertInstanceOf('Acuity_Db_Select', $result);
    		
    		$expected = 'SELECT  FROM table';
    		$this->assertEquals($expected, $this->select->assemble());

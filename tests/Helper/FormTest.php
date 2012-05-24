@@ -1,26 +1,26 @@
 <?php
 
 require_once 'PHPUnit/Framework.php';
- 
+
 class Library_Helper_FormTest extends PHPUnit_Framework_TestCase
 {
-	
+
 	public function setUp()
 	{
 
 	}
-	
+
 	public function tearDown()
 	{
 
 	}
-	
+
 	public function testComplextConstruct()
 	{
 		$model = new Form_Helper_Mock();
-		
+
 		$form = new Acuity_Helper_Form($model);
-		
+
 		$expected = <<<EXPECTED
 <div class="formstart begin " id="formstartForm_Helper_Mock">
 <form action="" method="POST" name="Form_Helper_Mock"><input type="hidden" name="id" id="inputid" value="" /><div class="formfield text  required" id="formurl">
@@ -37,78 +37,78 @@ class Library_Helper_FormTest extends PHPUnit_Framework_TestCase
 </form>
 </div>
 EXPECTED;
-		
+
 		$this->assertEquals($expected, (string) $form);
 	}
-    
+
    	public function testInstantiation()
    	{
    		$result = new Acuity_Helper_Form();
-   		
-   		$this->assertType('Acuity_Helper_Form', $result);
+
+   		$this->assertInstanceOf('Acuity_Helper_Form', $result);
    	}
-   	
+
 	public function testBegin()
    	{
    		$form = new Acuity_Helper_Form();
-   		
+
    		$result = $form->begin('test');
-   		
-   		$this->assertType('Acuity_Form_Begin', $result);
+
+   		$this->assertInstanceOf('Acuity_Form_Begin', $result);
    	}
-   	
+
 	public function testHidden()
    	{
    		$form = new Acuity_Helper_Form();
-   		
+
    		$result = $form->hidden('test');
-   		
-   		$this->assertType('Acuity_Form_Hidden', $result);
+
+   		$this->assertInstanceOf('Acuity_Form_Hidden', $result);
    	}
 
 	public function testText()
    	{
    		$form = new Acuity_Helper_Form();
-   		
+
    		$result = $form->text('test');
-   		
-   		$this->assertType('Acuity_Form_Text', $result);
+
+   		$this->assertInstanceOf('Acuity_Form_Text', $result);
    	}
-   	
+
 	public function testSubmit()
    	{
    		$form = new Acuity_Helper_Form();
-   		
+
    		$result = $form->submit('test');
-   		
-   		$this->assertType('Acuity_Form_Submit', $result);
+
+   		$this->assertInstanceOf('Acuity_Form_Submit', $result);
    	}
-   	
+
 	public function testEnd()
    	{
    		$form = new Acuity_Helper_Form();
-   		
+
    		$result = $form->end('test');
-   		
-   		$this->assertType('Acuity_Form_End', $result);
+
+   		$this->assertInstanceOf('Acuity_Form_End', $result);
    	}
-   	
+
 	public function testMultiselect()
    	{
    		$form = new Acuity_Helper_Form();
-   		
+
    		$result = $form->multiselect('test', array());
-   		
-   		$this->assertType('Acuity_Form_Multiselect', $result);
+
+   		$this->assertInstanceOf('Acuity_Form_Multiselect', $result);
    	}
-   	
+
 	public function testSelect()
    	{
    		$form = new Acuity_Helper_Form();
-   		
+
    		$result = $form->select('test', array());
-   		
-   		$this->assertType('Acuity_Form_Select', $result);
+
+   		$this->assertInstanceOf('Acuity_Form_Select', $result);
    	}
 }
 
@@ -119,9 +119,9 @@ class Form_Helper_Mock extends Acuity_Model_Entity
 		'url',
 		'name',
 	);
-	
+
 	public function getSelect($primaryKey, $options = array())
 	{
-		
+
 	}
 }

@@ -18,8 +18,8 @@
  * @created  Jan 28, 2010
  *
  */
- 
- 
+
+
  /**
  * Autoloads files from the root
  *
@@ -36,26 +36,27 @@ class Acuity_Autoloader_Root extends Acuity_Autoloader_Loader
 {
 	/**
 	 * Load a class
-	 * 
+	 *
 	 * @param string $className Name of the class
-	 * 
+	 *
 	 * @return true of class was loaded, false otherwise
 	 */
 	public function load($className)
 	{
 		$fileName = str_replace('_', DS, $className) . '.php';
-		
+
 		$paths = array(
 			ROOT_PATH . DS
 		);
-		
+
 		foreach ($paths as $path) {
+		    echo $path . $fileName;
 			if (file_exists($path . $fileName)) {
 				include_once $path . $fileName;
 				return true;
 			}
 		}
-		
+
 		return false;
 	}
 }
